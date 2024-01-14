@@ -8,7 +8,7 @@ memo_type = gets.to_i # ユーザーの入力値を取得し、数字へ変換�
 # 「memo_type」の値（1 or 2）によって処理を分岐させていきましょう。
 if memo_type == 1
     puts "拡張子を除いたファイルを入力してください"
-    file_name = gets
+    file_name = gets.chomp
     p "メモしたい内容を記入してください"
     p "完了したらCtrl + Dをおします"
     input = STDIN.read
@@ -19,7 +19,7 @@ if memo_type == 1
 
 elsif memo_type == 2
     puts "拡張子を除いたファイルを入力してください"
-    existing_file = gets
+    existing_file = gets.chomp
     p "編集内容を入力してください"
     p "完了したらCtrl + Dをおします"
     correct = STDIN.read
